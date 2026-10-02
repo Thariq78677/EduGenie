@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EduGenie</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">AI Learning Companion</p>
+          <h1>EduGenie</h1>
+        </div>
+        <div class="header-tag">Google Gemini Powered Learning Assistant</div>
+      </header>
+
+      <main class="dashboard">
+        <section class="panel task-panel">
+          <h2>Choose a Task</h2>
+          <div class="task-grid" id="taskGrid">
+            <button class="task-card active" data-task="qa">
+              <span class="task-icon">?</span>
+              <span>Ask Question</span>
+            </button>
+            <button class="task-card" data-task="explain">
+              <span class="task-icon">✦</span>
+              <span>Explain Topic</span>
+            </button>
+            <button class="task-card" data-task="quiz">
+              <span class="task-icon">✓</span>
+              <span>Generate Quiz</span>
+            </button>
+            <button class="task-card" data-task="summarize">
+              <span class="task-icon">◫</span>
+              <span>Summarize Text</span>
+            </button>
+            <button class="task-card" data-task="learn">
+              <span class="task-icon">↗</span>
+              <span>Learning Path</span>
+            </button>
+          </div>
+        </section>
+
+        <section class="panel form-panel">
+          <label for="userInput" class="label">Your Input</label>
+          <textarea id="userInput" rows="8" placeholder="Ask your academic question here..."></textarea>
+          <button id="submitBtn" class="primary-btn">Generate Response</button>
+          <div id="loading" class="loading hidden">
+            <div class="spinner"></div>
+            <span>Generating...</span>
+          </div>
+          <div id="errorBox" class="error-box hidden"></div>
+        </section>
+
+        <section class="panel result-panel">
+          <h2>Result</h2>
+          <div id="resultArea" class="result-area"></div>
+        </section>
+      </main>
+    </div>
+
+    <script src="/static/script.js"></script>
+  </body>
+</html>
