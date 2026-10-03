@@ -1,4 +1,5 @@
 import logging
+from pathlib import Path
 from typing import Any
 
 from fastapi import FastAPI, HTTPException, Request
@@ -15,14 +16,16 @@ from summary_module import summarize_text
 
 logging.basicConfig(level=logging.INFO)
 
+BASE_DIR = Path(__file__).resolve().parent
+
 app = FastAPI(
     title="EduGenie",
     description="Google Gemini Powered Learning Assistant",
     version="1.0.0",
 )
 
-app.mount("/static", StaticFiles(directory="static"), name="static")
-templates = Jinja2Templates(directory="templates")
+app.mount("/static", StaticFiles(directory=str(BASE_DIR / "static")), name="static")
+templates = Jinja2Templates(directory=str(BASE_DIR / "templates"))
 
 
 class QuestionRequest(BaseModel):
