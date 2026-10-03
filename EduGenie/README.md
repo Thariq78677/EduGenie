@@ -1,4 +1,8 @@
-# EduGenie – Google Gemini Powered Learning Assistant
+# EduGenie: Google Gemini Powered Learning Assistant
+
+## 🚀 Live Demo
+
+[Open EduGenie](https://edu-genie-8a2zbcn8z-mohamedthariq77777-9201s-projects.vercel.app/)
 
 ## Team Details
 
