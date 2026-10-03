@@ -1,100 +1,117 @@
 # EduGenie – Google Gemini Powered Learning Assistant
 
-## Overview
-EduGenie is a lightweight AI-powered educational assistant designed to support students with academic learning. It helps users ask questions, understand difficult concepts, create quizzes, summarize content, and follow guided learning paths using Google Gemini.
+## Team Details
+
+**Team Leader:** Mohamed Thariq
+
+**Team Members:**
+- Nandha Kumar
+- Muniyappan
+- Mohanakrishnan
+
+---
+
+## Project Overview
+
+EduGenie is a Google Gemini powered learning assistant designed to help students understand academic topics, clarify doubts, revise content, practice through quizzes, and receive personalized learning recommendations.
+
+The system uses Generative AI to provide simplified explanations and learning support through a student-friendly interface.
+
+---
 
 ## Problem Statement
-Students often struggle with understanding complex topics, revising large amounts of material, and staying motivated during self-learning. They need fast, simple, and structured support without relying on traditional classroom dependency.
 
-## Proposed Solution
-EduGenie uses generative AI to provide instant academic support. The system turns difficult ideas into simple explanations, answers quick learning questions, creates quizzes for self-assessment, summarizes educational text, and recommends a structured learning path.
+Students often face difficulty understanding complex concepts, revising long passages, and finding structured practice resources.
 
-## Features
-- AI Question Answering
-- Concept Explanation
-- Quiz Generation
-- Text Summarization
-- Personalized Learning Path
+Traditional learning resources may not provide instant, simplified, and personalized support in one place.
+
+EduGenie addresses this problem by providing AI-powered learning assistance through a single application.
+
+---
+
+## Key Features
+
+- AI-powered Question & Answer
+- Simplified topic explanations
+- AI-generated quizzes
+- Text summarization
+- Personalized learning recommendations
+- Student-friendly interface
+- Fast API-based backend
+- Google Gemini integration
+
+---
 
 ## Technology Stack
-- Python
-- FastAPI
-- Google Gemini API
+
+### Frontend
 - HTML
 - CSS
 - JavaScript
-- Jinja2
-- Uvicorn
-- python-dotenv
 
-## System Architecture
-User → HTML/CSS/JavaScript Frontend → FastAPI Backend → EduGenie Modules → Google Gemini API → Response → Frontend Display
+### Backend
+- Python
+- FastAPI
 
-## Project Structure
-- [1. Brainstorming & Ideation](1.%20Brainstorming%20&%20Ideation)
-- [2. Requirement Analysis](2.%20Requirement%20Analysis)
-- [3. Project Design Phase](3.%20Project%20Design%20Phase)
-- [4. Project Planning Phase](4.%20Project%20Planning%20Phase)
-- [5. Project Development Phase](5.%20Project%20Development%20Phase)
-- [6. Project Testing](6.%20Project%20Testing)
-- [7. Project Documentation](7.%20Project%20Documentation)
-- [8. Project Demonstration](8.%20Project%20Demonstration)
+### AI
+- Google Gemini API
 
-## Installation
-1. Install Python 3.10 or above.
-2. Create a virtual environment.
-3. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
+### Database
+- SQLite
 
-## Configuration
-Create a `.env` file using the sample file:
-```bash
-copy .env.example .env
-```
-Then replace the placeholder value with your real Gemini API key.
+### Version Control
+- Git
+- GitHub
 
-## Running the Project
-```bash
-uvicorn main:app --reload
-```
-Open:
-- http://127.0.0.1:8000/
-- http://127.0.0.1:8000/docs
+---
+
+## System Flow
+
+Student
+↓
+EduGenie Interface
+↓
+FastAPI Backend
+↓
+Google Gemini API
+↓
+AI Processing
+↓
+Learning Output
+↓
+Student
+
+---
 
 ## API Endpoints
-| Endpoint | Purpose |
-| --- | --- |
-| /qa | Question Answering |
-| /explain | Concept Explanation |
-| /quiz | Quiz Generation |
-| /summarize | Summarization |
-| /learn/recommendations | Learning Path |
 
-## Testing
-Testing is performed through the FastAPI documentation and direct API requests. Gemini API testing requires a valid `GEMINI_API_KEY`.
+| Endpoint | Method | Purpose |
+|----------|--------|---------|
+| `/qa` | POST | Answer student questions |
+| `/explain` | POST | Explain academic topics |
+| `/quiz` | POST | Generate quizzes |
+| `/summarize` | POST | Summarize educational text |
+| `/learn/recommendations` | POST | Provide learning recommendations |
 
-## Future Enhancements
-- Multi-language support
-- Student profile personalization
-- Topic difficulty adjustments
-- Better analytics and dashboards
-- Offline fallback modes
+---
 
-## Project Documentation
-- [1. Brainstorming & Ideation/Problem Statement.md](1.%20Brainstorming%20&%20Ideation/Problem%20Statement.md)
-- [2. Requirement Analysis/Functional Requirements.md](2.%20Requirement%20Analysis/Functional%20Requirements.md)
-- [3. Project Design Phase/Project Design.md](3.%20Project%20Design%20Phase/Project%20Design.md)
-- [4. Project Planning Phase/Project Timeline.md](4.%20Project%20Planning%20Phase/Project%20Timeline.md)
-- [5. Project Development Phase/Development README.md](5.%20Project%20Development%20Phase/Development%20README.md)
-- [6. Project Testing/Test Plan.md](6.%20Project%20Testing/Test%20Plan.md)
-- [7. Project Documentation/Project Report.md](7.%20Project%20Documentation/Project%20Report.md)
-- [8. Project Demonstration/Demo Guide.md](8.%20Project%20Demonstration/Demo%20Guide.md)
+## Project Structure
 
-## Author
-Student Name:
-College:
-Department:
-Course:
-Naan Mudhalvan:
+```text
+EduGenie/
+│
+├── static/
+├── templates/
+│
+├── main.py
+├── gemini_client.py
+├── qna.py
+├── explanation_module.py
+├── quiz_module.py
+├── summary_module.py
+├── learning_path.py
+│
+├── requirements.txt
+├── .env.example
+├── .gitignore
+└── README.md
